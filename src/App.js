@@ -29,12 +29,6 @@ class App extends Component {
         <main className="App-header">
           <h1>My Anime List</h1>
 
-          <ul>
-            {this.props.myList !== undefined && this.props.myList.map((anime, index) => (
-              <li key={index}>{anime}</li>
-            ))}
-          </ul>
-
           <form onSubmit={this.handlerSubmit}>
             <input
               type="text"
@@ -45,6 +39,12 @@ class App extends Component {
 
             <button type="submit">+</button>
           </form>
+
+          <ul>
+            {this.props.myList !== undefined && this.props.myList.map((anime, index) => (
+              <li key={index}>{anime}</li>
+            ))}
+          </ul>
         </main>
       </div>
     );
